@@ -1,0 +1,258 @@
+body {
+    font-size: 14px;
+}
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+}
+/*   header   */
+.header {
+    width: 100%;
+    height: 0.767rem;
+    background: #00be38;
+    position: relative;
+    a {
+        color: #fff;
+        padding: 0 10px;
+        line-height: 0.767rem;
+        &:first-child {
+            float: left;
+            font-size: 30px;
+        }
+        &:last-child {
+            float: right;
+            width: 0.426rem;
+            height: 1rem;
+            display: block;
+            img {
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+    h1 {
+        position: absolute;
+        left: 0.767rem;
+        right: 0.767rem;
+        top: 0;
+        font-size: 17px;
+        font-weight: bolder;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+    }
+}
+/*   header   */
+/*   main   */
+.main {
+    width: 100%;
+    height: 100%;
+    -webkit-flex: 1;
+    .seach {
+        width: 100%;
+        height: 0.922rem;
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+        input{
+                width:80%;
+                height:26px;
+                margin: 0 10%;
+                border-radius: 5px;
+                border:1px solid #ccc;
+            }
+        div {
+            width: 96%;
+            display: -webkit-flex;
+            a {
+                -webkit-flex-grow: 1;
+                text-align: center;
+                color: #B29999;
+                &:first-child {
+                    color: #00BE38;
+                }
+                span {
+                    display: block;
+                    width: 0.511rem;
+                    height: 0.511rem;
+                    margin: 0 auto;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .row {
+        margin-top: 10px;
+        border-bottom: 2px solid #2cc650;
+        padding: 5px 5px 10px;
+        ul {
+            width: 100%;
+            display: -webkit-flex;
+            li {
+                width: 50%;
+                -webkit-flex-grow: 1;
+                button {
+                    width: 98%;
+                    display: inline-block;
+                    padding: 6px 12px;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    line-height: 0.38rem;
+                    text-align: center;
+                    white-space: nowrap;
+                    //chun zhi dui qi
+                    vertical-align: middle;
+                    //finger
+                    cursor: pointer;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    background: #fff;
+                    &.on {
+                        background: #fd6c01;
+                        border: 1px solid #d58512;
+                        color: #fff;
+                        span {
+                            border-top: 5px solid #fff;
+                        }
+                    }
+                    span {
+                        width: 0;
+                        height: 0;
+                        display: inline-block;
+                        border-top: 5px solid #000;
+                        border-left: 5px solid transparent;
+                        border-bottom: 1px solid transparent;
+                        border-right: 5px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+    .AsiaPlace {
+        width: 100%;
+        ul {
+            li {
+                height: 0.887rem;
+                border-radius: 3px;
+                background: #F5F5F5;
+                border: 1px solid #DDDDDD;
+                margin-top: 5px;
+                line-height: 0.887rem;
+                padding-left: 10px;
+                font-size: 18px;
+                span {
+                    float: right;
+                    padding-right: 10px;
+                    line-height: 0.887rem;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .way {
+        width: 100%;
+        ul {
+            li {
+                height: 0.887rem;
+                border-radius: 3px;
+                background: #F5F5F5;
+                border: 1px solid #DDDDDD;
+                margin-top: 5px;
+                line-height: 0.887rem;
+                padding-left: 10px;
+                font-size: 18px;
+                span {
+                    float: right;
+                    padding-right: 10px;
+                    line-height: 0.887rem;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .travel {
+        width: 100%;
+        height: 1.706rem;
+        border-bottom: 1px solid #ccc;
+        dl {
+            margin: 5px 0;
+            display: -webkit-flex;
+            dt {
+                width: 2.047rem;
+                height: 2rem;
+                margin: 0 30px;
+                img {
+                    width: 2.047rem;
+                    vertical-align: middle;
+                }
+            }
+            dd {
+                -webkit-flex-grow: 1;
+                p {
+                    width: 85%;
+                    a {
+                        line-height: 20px;
+                        font-size: 14px;
+                    }
+                }
+                div {
+                    height: 0.511rem;
+                    span {
+                        line-height: 0.511rem;
+                        color: #fa6c78;
+                    }
+                    a {
+                        float: right;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .message{
+        width:100%;
+        height:0.546rem;
+        .messageBox{
+            ul{
+                display: -webkit-flex;
+                li{
+                    -webkit-flex-grow:1;
+                    text-align: center;
+                    line-height:0.546rem;
+                }
+            }
+        }
+    }
+}
+/*   main   */
+
+/*  footer  */
+.footer{
+    width:100%;
+    height:0.75rem;
+    display: -webkit-flex;
+    button{
+        font-size:0.307rem;
+    }
+    .leftBtn{
+        width:1.928rem;
+        background: #b5b5b5;
+        color:#4B4A4A;
+    }
+    .rightBtn{
+        -webkit-flex-grow:1;
+        background:#fe9903;
+        color:#fff;
+    }
+}
+/*  footer  */

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<title>北美洲</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/D_base.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="header">
+				<a href="#" class="icon-angle-left"></a>
+				<h1>全部旅游服务</h1>
+				<a href="#" id="home"><img src="../img/wppctop2.png" alt="" /></a>
+			</header>
+			<div class="main" id="main">
+				<section class="index">
+					<!--<div class="seach" style="display: none;">
+						<div>
+							<a href="#"><span></span>首页</a>
+							<a href="#"><span><img src="../img/w-wapheadpic2.png"/></span>搜索</a>
+							<a href="#"><span><img src="../img/w-wapheadpic3.png"/></span>我的七洲</a>
+							<a href="#"><span><img src="../img/w-wapheadpic4.png"/></span>购物车</a>
+						</div>
+					</div>-->
+					<div class="row">
+						<ul>
+							<li><button id="Asia">亚洲<span></span></button></li>
+							<li><button id="all">全部旅游服务<span></span></button></li>
+						</ul>
+					</div>
+					<div class="AsiaPlace" style="display: none;"></div>
+					<div class="way" style="display: none;"></div>
+					<div class="travelList" id="travelList"></div>
+				</section>
+			</div>
+		</div>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/handlebars.js"></script>
+		<script src="../js/setfontsize.js"></script>
+		<script src="../js/D_into.js"></script>
+		<script id="moban" type="text/x-handlebars-template">
+			{{#each this.tarvel}}
+			<div class="travel">
+				<dl>
+					<dt><img src="../img/{{img}}"/></dt>
+					<dd>
+						<p><a href="#">{{place}}</a></p>
+						<div><span>{{price}}</span>
+							<a href="#"><img src="../img/{{into}}" /></a>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			{{/each}}
+		</script>
+		<script id="moban1" type="text/x-handlebars-template">
+			<ul>
+				{{#each this.countries}}
+				<li>{{country}}<span class="icon-angle-right"></span></li>
+				{{/each}}
+			</ul>
+		</script>
+		<script id="moban2" type="text/x-handlebars-template">
+			<ul>
+				{{#each this.serve}}
+				<li>{{way}}<span class="icon-angle-right"></span></li>
+				{{/each}}
+			</ul>
+		</script>
+		<script>
+			$(function() {
+				$.ajax({
+					type: "get",
+					dataType: "json",
+					url: "D_North.json",
+					success: function(data) {
+						console.log(data);
+						var html = $("#moban").html(),
+							moban = Handlebars.compile(html);
+						$(".travelList").html(moban(data));
+					},
+					error: function() {
+						alert("数据传输错误")
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

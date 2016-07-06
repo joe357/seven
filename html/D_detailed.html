@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<title>详情页</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/D_base.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<a href="#" class="icon-angle-left"></a>
+				<h1>全部旅游服务</h1>
+				<a href="#" id="home"><img src="../img/wppctop2.png" alt="" /></a>
+			</header>
+			<div class="main" id="main">
+				<section class="index">
+					<div class="seach" style="display: none;">
+						<div>
+							<a href="#"><span></span>首页</a>
+							<a href="#"><span><img src="../img/w-wapheadpic2.png"/></span>搜索</a>
+							<a href="#"><span><img src="../img/w-wapheadpic3.png"/></span>我的七洲</a>
+							<a href="#"><span><img src="../img/w-wapheadpic4.png"/></span>购物车</a>
+						</div>
+					</div>
+					<div class="message">
+						<div class="messageBox">
+							<ul>
+								<li data-con="introduce">服务介绍</li>
+								<li data-con="state">详细说明</li>
+								<li data-con="experience">先睹为快</li>
+								<li data-con="review">客户点评</li>
+								<li data-con="serve">相关服务</li>
+							</ul>
+							<div class="box">
+								
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<footer class="footer">
+				<button class="leftBtn">联系客服</button>
+				<button class="rightBtn">立即预订</button>
+			</footer>
+		</div>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/handlebars.js"></script>
+		<script src="../js/setfontsize.js"></script>
+		<script>
+		$(".box").load("D_introduce.html");
+		$(".messageBox li:first-child").css({"border-bottom":"2px solid #2cc650"});
+			$(function(){
+				$(".messageBox li").on("click",function(){
+					var con=$(this).data('con');
+					$(this).css({"border-bottom":"2px solid #2cc650"}).siblings().css({"border":"none"})
+					$(".box").load("D_"+con+".html");
+				})
+			})
+		</script>
+	</body>
+</html>
